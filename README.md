@@ -24,6 +24,7 @@ what DA does is that they use the copy of the dataset that is data warehouse so 
 we performe ETL(extract transform load)
 so we plugged mysql with tableau [or you can export it to csv format] then retrieved the data, created star schema and performed etl 
 
+## Using star schema, we make relationshps
 ![image](https://github.com/user-attachments/assets/5a351f62-ac2e-4413-b19d-e27820f6a4cb)
 
 
@@ -50,19 +51,19 @@ so we plugged mysql with tableau [or you can export it to csv format] then retri
 
     `SELECT * from transactions where currency="USD"`
 
-1. Show transactions in 2020 join by date table
+1. Show transactions in 2023 join by date table
 
-    `SELECT transactions.*, date.* FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020;`
+    `SELECT transactions.*, date.* FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2023;`
 
-1. Show total revenue in year 2020,
+1. Show total revenue in year 2023,
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.currency="INR\r" or transactions.currency="USD\r";`
+    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2023 and transactions.currency="INR\r" or transactions.currency="USD\r";`
 	
-1. Show total revenue in year 2020, January Month,
+1. Show total revenue in year 2023, January Month,
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and and date.month_name="January" and (transactions.currency="INR\r" or transactions.currency="USD\r");`
+    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2023 and and date.month_name="January" and (transactions.currency="INR\r" or transactions.currency="USD\r");`
 
-1. Show total revenue in year 2020 in Chennai
+1. Show total revenue in year 2023 in Chennai
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020
+    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2023
 and transactions.market_code="Mark001";`
