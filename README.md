@@ -24,6 +24,9 @@ what DA does is that they use the copy of the dataset that is data warehouse so 
 we performe ETL(extract transform load)
 so we plugged mysql with tableau [or you can export it to csv format] then retrieved the data, created star schema and performed etl 
 
+![image](https://github.com/user-attachments/assets/5a351f62-ac2e-4413-b19d-e27820f6a4cb)
+
+
 
 ### Data Analysis Using SQL
 
